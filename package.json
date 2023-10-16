@@ -3,7 +3,7 @@
   "name": "backend_todo_app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "engines": {
     "node": "18.x"
   },
