@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "priority": {
+            "type": "string"
+        }
+    },
+    "required": ["name", "priority"],
+    "additionalProperties": false
+}
