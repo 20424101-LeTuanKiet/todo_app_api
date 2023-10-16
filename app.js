@@ -1,7 +1,7 @@
 import express from 'express';
 import 'dotenv/config';
 import cors from 'cors';
-import morgan from 'morgan';
+// import morgan from 'morgan';
 import todosRouter from './routes/todos.route.js';
 import userRouter from './routes/user.route.js';
 import authRouter from './routes/auth.route.js';
@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 // setup the logger
-morgan.token('body', (req, res) => JSON.stringify(req.body));
+// morgan.token('body', (req, res) => JSON.stringify(req.body));
 // app.use(morgan(':method :url :status :response-time ms - :res[content-length] :body - :req[content-length]', { stream: accessLogStream }))
 
 app.get('/', function (req, res){
