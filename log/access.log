@@ -51,3 +51,10 @@ POST /api/auth/refresh 200 125.395 ms - 231 {"accessToken":"eyJhbGciOiJIUzI1NiIs
 GET /api/todos 200 4.506 ms - 2079 {} - -
 GET /api/todos 200 5.216 ms - 2079 {} - -
 POST /api/auth/refresh 200 37.329 ms - 231 {"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlZTI2M2M4YS0yOWI5LTQ3YzYtODc0Yi0zYWM1OTRkMjg5MzgiLCJyb2xlcyI6Imd1ZXN0IiwiaWF0IjoxNjk2OTExNTM1LCJleHAiOjE2OTY5MTIxMzV9.D2KwunOZVY2jN9aDg-siyuOtlFSnFZ8KspbKSIAo9Zg","refreshToken":"eba7d747-521e-4eeb-b565-32748c1da942"} - 301
+GET / 200 7.270 ms - 36 {} - -
+GET /favicon.ico 404 5.116 ms - 150 {} - -
+GET / 304 0.629 ms - - {} - -
+POST /api/auth/ 200 2828.389 ms - 306 {"username":"admin","password":"admin"} - 55
+GET /api/todos 401 15.396 ms - 34 {} - -
+GET /api/todos 200 6341.383 ms - 2079 {} - -
+POST /api/auth/refresh 401 1006.816 ms - 37 {"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlZTI2M2M4YS0yOWI5LTQ3YzYtODc0Yi0zYWM1OTRkMjg5MzgiLCJyb2xlcyI6Imd1ZXN0IiwiaWF0IjoxNjk2OTExNTM1LCJleHAiOjE2OTY5MTIxMzV9.D2KwunOZVY2jN9aDg-siyuOtlFSnFZ8KspbKSIAo9Zg","refreshToken":"eba7d747-521e-4eeb-b565-32748c1da942"} - 301
