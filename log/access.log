@@ -60,3 +60,4 @@ GET /api/todos 200 6341.383 ms - 2079 {} - -
 POST /api/auth/refresh 401 1006.816 ms - 37 {"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlZTI2M2M4YS0yOWI5LTQ3YzYtODc0Yi0zYWM1OTRkMjg5MzgiLCJyb2xlcyI6Imd1ZXN0IiwiaWF0IjoxNjk2OTExNTM1LCJleHAiOjE2OTY5MTIxMzV9.D2KwunOZVY2jN9aDg-siyuOtlFSnFZ8KspbKSIAo9Zg","refreshToken":"eba7d747-521e-4eeb-b565-32748c1da942"} - 301
 GET / 200 6.785 ms - 36 {} - -
 GET /favicon.ico 404 5.297 ms - 150 {} - -
+GET / 304 8.347 ms - - {} - -
