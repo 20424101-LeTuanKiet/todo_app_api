@@ -1,6 +1,6 @@
 import express from 'express';
 // import 'dotenv/config';
-// import cors from 'cors';
+import cors from 'cors';
 // import morgan from 'morgan';
 import todosRouter from './routes/todos.route.js';
 import userRouter from './routes/user.route.js';
@@ -10,7 +10,7 @@ import auth from './middlewares/auth.mdw.js';
 
 const app = express();
 
-// app.use(cors());
+app.use(cors());
 app.use(express.json());
 
 // setup the logger
