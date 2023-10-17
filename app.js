@@ -27,6 +27,6 @@ app.use('/api/todos', auth, todosRouter);
 app.use('/api/user', userRouter);
 app.use('/api/auth', authRouter);
 
-app.listen(process.env.PORT || 3001, function(){
-    console.log(`Product api server is listening at http://localhost:${process.env.PORT || 3001}`);
+app.listen(process.env.PORT || 3000, function(){
+    console.log(`Product api server is listening at http://localhost:${process.env.PORT || 3000}`);
 });
