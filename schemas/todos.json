@@ -1,13 +1,19 @@
 {
     "type": "object",
     "properties": {
+        "id": {
+            "type": "string"
+        },
         "name": {
             "type": "string"
         },
         "priority": {
             "type": "string"
+        },
+        "completed": {
+            "type": "boolean"
         }
     },
-    "required": ["name", "priority"],
+    "required": ["id", "name", "priority", "completed"],
     "additionalProperties": false
 }

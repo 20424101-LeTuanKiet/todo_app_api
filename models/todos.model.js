@@ -1,7 +1,7 @@
 import db from '../utils/db.js';
 
-export function findAll(){
-    return db('todos').whereNot('isDelete', 1);
+export function findAll(id){
+    return db('todos').where('userId', id).whereNot('isDelete', 1);
 }
 
 export async function findById(id){
@@ -22,6 +22,6 @@ export function del(id){
     return db('todos').where('id', id).update('isDelete', 1);
 }
 
-export function completed(id){
-    return db('todos').where('id', id).update('completed', true);
+export function completed(id, complete){
+    return db('todos').where('id', id).update('completed', complete);
 }

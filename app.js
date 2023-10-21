@@ -1,5 +1,5 @@
 import express from 'express';
-// import 'dotenv/config';
+import 'dotenv/config';
 import cors from 'cors';
 // import morgan from 'morgan';
 import todosRouter from './routes/todos.route.js';

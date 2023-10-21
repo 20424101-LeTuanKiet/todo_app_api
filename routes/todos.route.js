@@ -9,7 +9,8 @@ const router = express.Router();
 
 
 router.get('/', async function (req, res){
-    const list = await todosModel.findAll();
+    const {userId} = req.accessTokenPayload;
+    const list = await todosModel.findAll(userId);
     res.json(list);
 })
 
@@ -35,13 +36,15 @@ router.post('/', validate(schema), async function (req, res){
     //     isDelete: 0,
     // }
 
+    const {userId} = req.accessTokenPayload;
     let todo = req.body;
 
     todo = {
         ...todo,
-        id: uuidv4(),
-        userId: '1'
+        userId: userId
     }
+
+    console.log(todo);
 
     const ret = await todosModel.add(todo);
     res.status(201).json(todo);
@@ -59,13 +62,15 @@ router.delete('/:id', async function (req, res){
     })
 })
 
-router.put('/completed/:id', async function (req, res){
+router.put('/completed/:id/:completed', async function (req, res){
     const id = req.params.id || 0;
+    const complete = JSON.parse(req.params.completed);
+    console.log(`[/completed/:id/:completed]: ${complete}`);
     if(id === 0){
         res.status(204).end();
     }
 
-    const n = await todosModel.completed(id);
+    const n = await todosModel.completed(id, complete);
     res.json({
         affected: n
     })

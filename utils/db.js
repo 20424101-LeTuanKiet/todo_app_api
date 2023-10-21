@@ -1,13 +1,14 @@
 import knex from 'knex';
+import 'dotenv/config';
 
 export default knex({
-    client: 'mysql2',
+    client: process.env.DB_CLIENT,
     connection: {
-      host : 'db4free.net',
-      port : 3306,
-      user : 'hcmus_py',
-      password : '97cf7a8d',
-      database : 'hcmus_foodrecipe'
+      host : process.env.DB_CONNECTION_HOST,
+      port : process.env.DB_CONNECTION_PORT,
+      user : process.env.DB_CONNECTION_USER,
+      password : process.env.DB_CONNECTION_PASSWORD,
+      database : process.env.DB_CONNECTION_DATABASE
     },
     pool: { min: 0, max: 10 }
   });
