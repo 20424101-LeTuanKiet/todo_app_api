@@ -38,7 +38,7 @@ router.post('/', validate(schema), async function (req, res){
         roles: user.role,
     }
     const opts = {
-        expiresIn: 24*60*60 // one day
+        expiresIn: 10*60 // 10m
     }
     const accessToken = jwt.sign(payload, 'SECRET_KEY', opts);
 
